@@ -1,0 +1,1468 @@
+<!doctype html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#090a0d">
+    <meta name="description"
+        content="Professional cinema sound, concert PA, auditorium audio installation, system tuning and maintenance in Andhra Pradesh, India.">
+    <title>Veyra Audio | Professional Sound Solutions</title>
+    <style>
+        :root {
+            --bg: #090a0d;
+            --panel: #13161b;
+            --panel2: #1c2026;
+            --text: #f4f5f6;
+            --muted: #a4a8af;
+            --accent: #e50914;
+            --accent-hover: #ff2833;
+            --line: #2b2e34;
+            --blue: #65b9ff;
+            --red: #ff6868;
+            --amber: var(--accent);
+            --amber2: #b80f19;
+            --radius: 19px;
+            --max: 1180px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 94px
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font: 16px/1.55 system-ui, -apple-system, Segoe UI, sans-serif;
+            overflow-x: hidden
+        }
+
+        body.modal-open {
+            overflow: hidden
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        button:disabled {
+            opacity: .6;
+            cursor: not-allowed
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            accent-color: var(--amber)
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 3px
+        }
+
+        svg {
+            max-width: 100%
+        }
+
+        .container {
+            width: min(calc(100% - 36px), var(--max));
+            margin: auto
+        }
+
+        .eyebrow {
+            font-size: .76rem;
+            text-transform: uppercase;
+            letter-spacing: .18em;
+            color: var(--amber);
+            font-weight: 800
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
+        }
+
+        h1 {
+            font-size: clamp(2.8rem, 7vw, 6.2rem);
+            line-height: 1.01;
+            letter-spacing: -.065em;
+            text-wrap: balance
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4.4vw, 3.6rem);
+            line-height: 1.1;
+            letter-spacing: -.045em
+        }
+
+        h3 {
+            font-size: 1.21rem;
+            line-height: 1.3
+        }
+
+        section {
+            padding: 75px 0
+        }
+
+        .section-head {
+            max-width: 660px;
+            margin-bottom: 30px
+        }
+
+        .section-head p {
+            color: var(--muted)
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            border: 1px solid transparent;
+            padding: 13px 21px;
+            border-radius: 7px;
+            font-weight: 750;
+            background: var(--accent);
+            color: #fff;
+            transition: transform .2s, background .2s, border-color .2s;
+            box-shadow: 0 5px 18px #e5091420
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: var(--accent-hover)
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: var(--text);
+            border-color: #565b63
+        }
+
+        .btn.secondary:hover {
+            border-color: var(--amber);
+            background: #1c1719;
+            box-shadow: none
+        }
+
+        .btn.small {
+            padding: 9px 14px;
+            font-size: .9rem
+        }
+
+        .btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px
+        }
+
+        .card {
+            background: linear-gradient(145deg, #191d23, #111419);
+            border: 1px solid var(--line);
+            padding: 24px;
+            border-radius: var(--radius);
+            transition: transform .25s, border-color .25s, box-shadow .25s
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #6f353a;
+            box-shadow: 0 14px 30px #0006
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px
+        }
+
+        .two {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        .icon-square {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: #292024;
+            color: var(--amber);
+            font-size: 1.5rem;
+            margin-bottom: 18px
+        }
+
+        .tag {
+            display: inline-flex;
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--amber);
+            border: 1px solid #653238;
+            border-radius: 5px;
+            padding: 5px 11px;
+            background: #1d1719
+        }
+
+        .chip-row {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin: 25px 0
+        }
+
+        .chip,
+        .slot {
+            background: #1b1e23;
+            color: #dedfe2;
+            border: 1px solid #383c43;
+            padding: 9px 15px;
+            border-radius: 99px
+        }
+
+        .chip[aria-pressed=true],
+        .slot[aria-pressed=true] {
+            background: var(--amber);
+            color: #fff;
+            border-color: var(--amber);
+            font-weight: 800
+        }
+
+        .notice {
+            border-left: 3px solid var(--amber);
+            padding: 11px 17px;
+            background: #211719;
+            color: #e2dadd;
+            border-radius: 0 9px 9px 0
+        }
+
+        #site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid #282b31;
+            background: #090a0df0;
+            backdrop-filter: blur(15px);
+            transition: transform .3s
+        }
+
+        #site-header.hidden {
+            transform: translateY(-110%)
+        }
+
+        .header-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.13rem;
+            font-weight: 950;
+            letter-spacing: .05em;
+            white-space: nowrap
+        }
+
+        .brand svg {
+            width: 32px;
+            height: 32px
+        }
+
+        .brand span span {
+            color: var(--amber)
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 20px
+        }
+
+        .nav a:not(.btn) {
+            font-size: .91rem;
+            color: #d7d9dd;
+            position: relative;
+            white-space: nowrap
+        }
+
+        .nav a:not(.btn):after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            height: 2px;
+            width: 0;
+            background: var(--amber);
+            transition: width .25s
+        }
+
+        .nav a[aria-current=page]:after,
+        .nav a:not(.btn):hover:after {
+            width: 100%
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--line);
+            background: var(--panel);
+            color: white;
+            border-radius: 8px;
+            padding: 7px 11px;
+            font-size: 1.3rem
+        }
+
+        .page {
+            animation: pageIn .38s both;
+            min-height: 50vh
+        }
+
+        .page.exiting {
+            animation: pageOut .16s both
+        }
+
+        @keyframes pageIn {
+            from {
+                opacity: 0;
+                transform: translateY(13px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        @keyframes pageOut {
+            to {
+                opacity: 0;
+                transform: translateY(-8px)
+            }
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 620px;
+            display: grid;
+            align-items: center;
+            background: radial-gradient(ellipse at 78% 42%, #3a1118 0%, #19151a 34%, transparent 66%), linear-gradient(135deg, #12151b, #08090c)
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 28px;
+            position: relative;
+            z-index: 1
+        }
+
+        .hero p {
+            max-width: 540px;
+            color: #d3d5d9;
+            font-size: 1.09rem
+        }
+
+        .hero h1 em {
+            color: var(--amber);
+            font-style: normal
+        }
+
+        .hero-art {
+            position: relative;
+            height: 440px;
+            display: grid;
+            place-items: center
+        }
+
+        .speaker {
+            width: min(76%, 350px);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 17px solid #2b3038;
+            background: radial-gradient(circle, #e50914 0 8%, #51252a 9% 16%, #11151b 17% 31%, #47494d 32% 35%, #0c0e12 36% 56%, #272c33 57% 72%, #07080a 73%);
+            box-shadow: 0 0 0 6px #060709, 0 0 50px #e5091440, inset 0 0 45px #000;
+            animation: throb 2.3s infinite ease-in-out;
+            z-index: 2
+        }
+
+        .ring {
+            position: absolute;
+            width: 60%;
+            aspect-ratio: 1;
+            border: 2px solid #e5091455;
+            border-radius: 50%;
+            animation: ring 3.3s infinite ease-out
+        }
+
+        .ring:nth-child(2) {
+            animation-delay: 1.1s
+        }
+
+        .ring:nth-child(3) {
+            animation-delay: 2.2s
+        }
+
+        .equalizer {
+            position: absolute;
+            bottom: 3%;
+            display: flex;
+            align-items: end;
+            gap: 7px;
+            height: 72px;
+            opacity: .8
+        }
+
+        .equalizer i {
+            width: 7px;
+            background: linear-gradient(var(--accent-hover), #9b1018);
+            border-radius: 3px;
+            animation: eq 1s infinite ease-in-out alternate
+        }
+
+        .equalizer i:nth-child(2n) {
+            animation-delay: -.6s
+        }
+
+        .equalizer i:nth-child(3n) {
+            animation-delay: -.3s
+        }
+
+        @keyframes throb {
+            50% {
+                transform: scale(1.045)
+            }
+        }
+
+        @keyframes ring {
+            0% {
+                transform: scale(.65);
+                opacity: 0
+            }
+
+            20% {
+                opacity: 1
+            }
+
+            100% {
+                transform: scale(1.8);
+                opacity: 0
+            }
+        }
+
+        @keyframes eq {
+            from {
+                height: 9px
+            }
+
+            to {
+                height: 65px
+            }
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            margin-top: -20px;
+            position: relative;
+            z-index: 2;
+            background: #13161b;
+            overflow: hidden
+        }
+
+        .stat {
+            padding: 24px 16px;
+            text-align: center;
+            border-right: 1px solid var(--line)
+        }
+
+        .stat:last-child {
+            border: 0
+        }
+
+        .stat strong {
+            font-size: 2.3rem;
+            display: block;
+            color: var(--amber);
+            line-height: 1.2
+        }
+
+        .stat span {
+            font-size: .84rem;
+            color: var(--muted)
+        }
+
+        .media {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            border-radius: 13px;
+            background: radial-gradient(ellipse at 55% 90%, #331a1f, #11151b 67%);
+            display: grid;
+            place-items: center;
+            margin-bottom: 16px
+        }
+
+        .media svg {
+            width: 95%;
+            height: 95%;
+            filter: drop-shadow(0 12px 13px #0009)
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            color: var(--muted);
+            font-size: .81rem;
+            margin-top: 10px
+        }
+
+        .testimonial q {
+            font-size: 1.05rem;
+            display: block;
+            margin: 15px 0
+        }
+
+        .banner {
+            background: radial-gradient(circle at 90% 5%, #45141a, transparent 52%), linear-gradient(125deg, #21181b, #15181e);
+            border: 1px solid #633038;
+            border-radius: 16px;
+            padding: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .page-hero {
+            padding: 75px 0 42px;
+            background: radial-gradient(ellipse at 75% 0%, #291216, transparent 65%)
+        }
+
+        .page-hero p {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 1.08rem
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 13px;
+            counter-reset: step
+        }
+
+        .process .card {
+            padding: 17px
+        }
+
+        .step-num {
+            color: var(--amber);
+            font-size: 1.6rem;
+            font-weight: 900
+        }
+
+        .format-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(280px, .9fr);
+            gap: 25px;
+            align-items: start
+        }
+
+        .diagram-wrap {
+            min-width: 0;
+            padding: 16px;
+            background: #12161c;
+            border: 1px solid #343840;
+            border-radius: 17px
+        }
+
+        .diagram-wrap svg {
+            display: block;
+            width: 100%;
+            height: auto
+        }
+
+        .speaker-node {
+            opacity: 0;
+            animation: speaker-in .38s cubic-bezier(.2, .8, .25, 1) both;
+            animation-delay: var(--delay, 0ms);
+            filter: drop-shadow(0 0 7px var(--speaker-glow))
+        }
+
+        .speaker-node.is-new {
+            animation: speaker-highlight 1s ease-out both;
+            animation-delay: var(--delay, 0ms)
+        }
+
+        .speaker-node.is-active .speaker-cabinet {
+            filter: drop-shadow(0 0 12px var(--speaker-color))
+        }
+
+        @keyframes speaker-in {
+            from {
+                opacity: 0;
+                scale: .48
+            }
+
+            to {
+                opacity: 1;
+                scale: 1
+            }
+        }
+
+        @keyframes speaker-highlight {
+            0% {
+                opacity: 0;
+                scale: .5
+            }
+
+            32% {
+                opacity: 1;
+                scale: 1.14;
+                filter: drop-shadow(0 0 18px var(--speaker-color))
+            }
+
+            100% {
+                opacity: 1;
+                scale: 1;
+                filter: drop-shadow(0 0 7px var(--speaker-glow))
+            }
+        }
+
+        .format-content.is-changing .speaker-node {
+            opacity: 0;
+            scale: .7;
+            transition: opacity .13s ease-in, scale .13s ease-in
+        }
+
+        /* Speaker visualizer: only affects the Services sound-format section. */
+        .room-svg {
+            overflow: visible;
+            width: 100%;
+            height: auto;
+            display: block
+        }
+
+        .speaker-node {
+            opacity: 1;
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: speaker-pop .43s cubic-bezier(.18, .9, .3, 1.25) both;
+            animation-delay: var(--delay)
+        }
+
+        .speaker-node.is-new .speaker-cabinet {
+            filter: drop-shadow(0 0 9px var(--speaker-color))
+        }
+
+        .speaker-node.is-active .speaker-cabinet {
+            filter: drop-shadow(0 0 16px var(--speaker-color)) brightness(1.7)
+        }
+
+        .sound-arc {
+            animation: wave-dash 6s linear infinite
+        }
+
+        @keyframes speaker-pop {
+            from {
+                opacity: 0;
+                scale: .4
+            }
+
+            to {
+                opacity: 1;
+                scale: 1
+            }
+        }
+
+        @keyframes wave-dash {
+            to {
+                stroke-dashoffset: -120
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            .speaker-node,
+            .sound-arc {
+                animation: none !important;
+                opacity: 1 !important;
+                scale: 1 !important
+            }
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px 16px;
+            font-size: .83rem;
+            color: #d3d5d9;
+            margin-top: 12px
+        }
+
+        .legend span {
+            display: inline-flex;
+            align-items: center
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px
+        }
+
+        .format-demo-tools {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 9px;
+            margin-top: 16px
+        }
+
+        .format-demo-tools .btn {
+            min-height: 40px
+        }
+
+        .format-status {
+            min-height: 1.5em;
+            margin: 10px 0 0;
+            color: var(--muted);
+            font-size: .82rem
+        }
+
+        .format-summary h3 {
+            font-size: 1.55rem;
+            margin: 8px 0
+        }
+
+        .format-counts {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin: 16px 0
+        }
+
+        .format-count {
+            padding: 11px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #111722
+        }
+
+        .format-count strong {
+            display: block;
+            color: var(--amber);
+            font-size: 1.2rem
+        }
+
+        .format-count span {
+            color: var(--muted);
+            font-size: .77rem
+        }
+
+        .format-note {
+            padding: 11px 13px;
+            border-left: 3px solid var(--amber);
+            background: #201719;
+            color: #d8dade;
+            font-size: .82rem
+        }
+
+        .channel-list {
+            padding: 0;
+            list-style: none;
+            margin: 13px 0
+        }
+
+        .channel-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #2b2e34;
+            color: #c9cdd2
+        }
+
+        .channel-list b {
+            color: var(--amber)
+        }
+
+        .project-card {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: inherit;
+            cursor: pointer
+        }
+
+        .project-card .media {
+            margin: -8px -8px 16px
+        }
+
+        .project-card h3 {
+            margin-bottom: 4px
+        }
+
+        .project-card:hover .media svg {
+            transform: scale(1.04)
+        }
+
+        .media svg {
+            transition: transform .3s
+        }
+
+        .partner-logo {
+            font-size: 1.35rem;
+            font-weight: 900;
+            min-height: 110px;
+            display: grid;
+            place-items: center;
+            filter: grayscale(1);
+            color: #b5bdcb;
+            transition: filter .2s, color .2s
+        }
+
+        .partner-logo:hover {
+            filter: none;
+            color: var(--amber)
+        }
+
+        .partner-logo small {
+            font-size: .65rem;
+            letter-spacing: .18em;
+            font-weight: 500;
+            display: block;
+            text-align: center
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 17px
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px
+        }
+
+        .field.full {
+            grid-column: 1/-1
+        }
+
+        .field label {
+            font-size: .87rem;
+            font-weight: 750
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            background: #0e1116;
+            color: #f4f5f6;
+            border: 1px solid #383c43;
+            border-radius: 10px;
+            padding: 12px;
+            min-height: 47px
+        }
+
+        .field textarea {
+            min-height: 95px;
+            resize: vertical
+        }
+
+        .field [aria-invalid=true] {
+            border-color: #ff7474
+        }
+
+        .error {
+            color: #ff9090;
+            font-size: .76rem;
+            min-height: 16px
+        }
+
+        .form-actions {
+            margin-top: 17px
+        }
+
+        .slot-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .accordion {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            margin: 10px 0;
+            overflow: hidden;
+            background: #13161b
+        }
+
+        .accordion button {
+            width: 100%;
+            background: transparent;
+            color: #f4f5f6;
+            border: 0;
+            text-align: left;
+            padding: 17px 19px;
+            font-weight: 750;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .accordion button span:last-child {
+            color: var(--amber);
+            transition: transform .25s
+        }
+
+        .accordion button[aria-expanded=true] span:last-child {
+            transform: rotate(45deg)
+        }
+
+        .accordion-body {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .28s
+        }
+
+        .accordion-body.open {
+            grid-template-rows: 1fr
+        }
+
+        .accordion-body>div {
+            overflow: hidden
+        }
+
+        .accordion-body p {
+            padding: 0 19px 17px;
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .download {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px
+        }
+
+        .booking-layout {
+            display: grid;
+            grid-template-columns: 1.65fr .85fr;
+            gap: 25px;
+            align-items: start
+        }
+
+        .sidebar-stack {
+            display: grid;
+            gap: 16px
+        }
+
+        .success {
+            text-align: center;
+            padding: 35px 10px
+        }
+
+        .success .check {
+            font-size: 4rem;
+            color: #7dd7a4
+        }
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 48;
+            background: #22c565;
+            color: #082614;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 #22c56555;
+            animation: waPulse 2.4s infinite
+        }
+
+        .whatsapp svg {
+            width: 31px;
+            height: 31px
+        }
+
+        @keyframes waPulse {
+            60% {
+                box-shadow: 0 0 0 16px transparent
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 transparent
+            }
+        }
+
+        footer {
+            padding: 54px 0 20px;
+            background: #08090c;
+            border-top: 1px solid var(--line)
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.4fr;
+            gap: 35px
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 8px;
+            color: var(--muted)
+        }
+
+        .footer-links a:hover {
+            color: var(--amber)
+        }
+
+        .bottom {
+            border-top: 1px solid var(--line);
+            padding-top: 18px;
+            margin-top: 40px;
+            color: var(--muted);
+            font-size: .8rem
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: #000b;
+            z-index: 90;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+            animation: fade .2s
+        }
+
+        .modal {
+            width: min(100%, 590px);
+            background: #15191f;
+            border: 1px solid #493238;
+            border-radius: 12px;
+            padding: 28px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: modalIn .25s
+        }
+
+        .modal-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 12px
+        }
+
+        .close {
+            background: #22262d;
+            color: #f4f5f6;
+            border: 1px solid #41464f;
+            border-radius: 8px;
+            font-size: 1.35rem;
+            padding: 2px 10px
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0
+            }
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: translateY(22px) scale(.97)
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .6s, transform .6s;
+            transition-delay: var(--stagger, 0ms)
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0
+        }
+
+        @media(max-width:950px) {
+            .nav {
+                gap: 10px
+            }
+
+            .nav a:not(.btn) {
+                font-size: .8rem
+            }
+
+            .header-inner>.btn {
+                display: none
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .process {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(max-width:720px) {
+            section {
+                padding: 51px 0
+            }
+
+            .menu-toggle {
+                display: block
+            }
+
+            .nav {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 76px;
+                background: #0e1116f2;
+                border-bottom: 1px solid var(--line);
+                padding: 20px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 19px
+            }
+
+            .nav.open {
+                display: flex
+            }
+
+            .nav a {
+                font-size: 1rem !important
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 65px 0 50px
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr
+            }
+
+            .hero-art {
+                height: 300px
+            }
+
+            .speaker {
+                width: 230px;
+                border-width: 13px
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 0
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0
+            }
+
+            .stat:nth-child(-n+2) {
+                border-bottom: 1px solid var(--line)
+            }
+
+            .grid,
+            .two,
+            .booking-layout,
+            .format-layout {
+                grid-template-columns: 1fr
+            }
+
+            .process {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .banner {
+                padding: 30px 23px;
+                display: block
+            }
+
+            .banner .btn {
+                margin-top: 12px
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .footer-grid>div:first-child {
+                grid-column: 1/-1
+            }
+
+            .page-hero {
+                padding: 50px 0 20px
+            }
+
+            .diagram-wrap {
+                padding: 9px
+            }
+
+            .format-demo-tools .btn {
+                flex: 1 1 auto
+            }
+        }
+
+        @media(prefers-reduced-motion: reduce) {
+
+            .speaker-node,
+            .speaker-node.is-new {
+                animation: none;
+                opacity: 1;
+                filter: none
+            }
+
+            .speaker-node.is-active .speaker-cabinet {
+                filter: drop-shadow(0 0 8px var(--speaker-color))
+            }
+
+            .format-content.is-changing .speaker-node {
+                opacity: 1;
+                scale: 1;
+                transition: none
+            }
+        }
+
+        @media(max-width:480px) {
+
+            .form-grid,
+            .process {
+                grid-template-columns: 1fr
+            }
+
+            .container {
+                width: min(calc(100% - 28px), var(--max))
+            }
+
+            .hero-art {
+                height: 240px
+            }
+
+            .speaker {
+                width: 190px
+            }
+
+            .stat strong {
+                font-size: 1.85rem
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr
+            }
+
+            .footer-grid>div:first-child {
+                grid-column: auto
+            }
+
+            .whatsapp {
+                right: 14px;
+                bottom: 14px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="site-header">
+        <div class="container header-inner"><a class="brand" href="#/" aria-label="Veyra Audio home"><svg
+                    viewBox="0 0 42 42" fill="none" aria-hidden="true">
+                    <rect x="2" y="2" width="38" height="38" rx="10" stroke="#e50914" stroke-width="3" />
+                    <circle cx="21" cy="21" r="12" stroke="#e50914" stroke-width="3" />
+                    <circle cx="21" cy="21" r="5" fill="#e50914" />
+                </svg><span>VEYRA<span> AUDIO</span></span></a><button class="menu-toggle" id="menu-toggle"
+                aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button>
+            <nav class="nav" id="nav" aria-label="Main navigation"><a href="#/">Home</a><a
+                    href="#/services">Services</a><a href="#/works">Previous Works</a><a
+                    href="#/partners">Partners</a><a href="#/support">Support</a><a href="#/book" class="btn small">Book
+                    Appointment</a></nav>
+        </div>
+    </header>
+    <main id="app" tabindex="-1"></main>
+    <footer id="footer"></footer><a id="whatsapp" class="whatsapp" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path
+                d="M16 .8A15.1 15.1 0 0 0 3 23.6L.8 31l7.6-2.1A15.2 15.2 0 1 0 16 .8Zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.4-.2-4.5 1.2L6 23.2l-.3-.4A12.3 12.3 0 1 1 16 28.3Zm6.8-9.2c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.8-1.8-1-1-1.8-2.1-2-2.5-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5-.1-.7l-1.2-2.9c-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1.1.5-.3.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 3 4.6 7.3 6.4 1 .4 1.8.6 2.4.7 1 .2 1.9.2 2.6.1.8-.1 2.2-.9 2.5-1.8.3-.8.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5Z" />
+        </svg></a>
+    <div id="modal-root"></div>
+    <script>
+        'use strict';
+        // =================== EASY-TO-EDIT CONTENT DATA ===================
+        const SITE = {brand: 'Veyra Audio', phone: '+91 98765 43210', phoneDigits: '919876543210', email: 'hello@veyraaudio.example', address: 'Visakhapatnam, Andhra Pradesh, India', years: 12, venues: 120, screens: 65, rebook: 92};
+        const SERVICES = [{icon: '◉', title: 'Cinema Sound Design', desc: 'Immersive sound coverage, screen channels and surround layouts for cinema halls.'}, {icon: '♫', title: 'Concert & PA Systems', desc: 'High-output sound reinforcement for live performances and outdoor events.'}, {icon: '▤', title: 'Auditorium Solutions', desc: 'Speech clarity and balanced acoustics for institutions and performance spaces.'}, {icon: '⌁', title: 'Installation & Cabling', desc: 'Clean rigging, structured cabling, rack builds and commissioning.'}, {icon: '◎', title: 'Tuning & Calibration', desc: 'DSP setup, equalization, time alignment and system optimization.'}, {icon: '⚙', title: 'AMC & Maintenance', desc: 'Planned inspections, preventive maintenance and issue resolution.'}];
+        const PROCESS = [['01', 'Site survey', 'We measure the room and understand your goals.'], ['02', 'System design', 'We propose layout, equipment and coverage.'], ['03', 'Transparent quote', 'Review options and scope before approval.'], ['04', 'Install', 'Professional mounting, cabling and checks.'], ['05', 'Tune & handover', 'Calibration, training and documentation.']];
+        const PROJECTS = [{id: 1, title: 'Coastal Multiplex — Sample', type: 'Cinema', city: 'Visakhapatnam', format: '7.1 surround', capacity: '220 seats', scope: 'Speaker design, installation, DSP tuning', year: 2025}, {id: 2, title: 'Seafront Live Stage — Sample', type: 'Concert', city: 'Andhra Pradesh', format: 'Stereo line-array PA', capacity: '3,000 attendees', scope: 'PA deployment, delay alignment, event mixing support', year: 2025}, {id: 3, title: 'University Hall — Sample', type: 'Auditorium', city: 'Vijayawada', format: '2.1 speech and music', capacity: '650 seats', scope: 'Acoustic survey, microphones, cabling, calibration', year: 2024}, {id: 4, title: 'Premium Screen 02 — Sample', type: 'Cinema', city: 'Rajahmundry', format: 'Dolby Atmos 7.1.4-style layout*', capacity: '180 seats', scope: 'Conceptual speaker layout and commissioning', year: 2024}, {id: 5, title: 'Open-Air Festival — Sample', type: 'Concert', city: 'Guntur', format: 'Stereo PA + subwoofers', capacity: '5,000 attendees', scope: 'PA planning, deployment and time alignment', year: 2023}, {id: 6, title: 'Cultural Centre — Sample', type: 'Auditorium', city: 'Tirupati', format: '5.1 surround', capacity: '850 seats', scope: 'Main and delay speakers, rack design, operator training', year: 2023}];
+        const PARTNERS = [{name: 'Technology Partner A', type: 'Technology'}, {name: 'DSP Platform B', type: 'Technology'}, {name: 'Regional Dealer C', type: 'Dealers'}, {name: 'AV Dealer D', type: 'Dealers'}, {name: 'Installation Team E', type: 'Installers'}, {name: 'Rigging Partner F', type: 'Installers'}];
+        const TESTIMONIALS = [{quote: 'Clear dialogue across the room and thoughtful commissioning from start to finish.', by: 'Sample cinema operator — placeholder'}, {quote: 'Professional rigging and reliable support for our live event.', by: 'Sample event organizer — placeholder'}, {quote: 'Good communication and practical guidance for our auditorium upgrade.', by: 'Sample facilities manager — placeholder'}];
+        const GUIDES = [{title: 'Planning your venue layout', body: 'Share seating plans, room dimensions, screen or stage dimensions, construction materials and power availability. Confirm intended content types, audience size and budget range before equipment selection.'}, {title: 'Speaker placement fundamentals', body: 'Aim main channels at the listening area, prevent blocked sight lines, preserve left/right balance and evaluate surround coverage across seats. Final angles and distances must be engineered for your venue.'}, {title: 'Cabling and amplifier matching', body: 'Use properly rated cables, label each run, isolate audio from mains where appropriate and confirm amplifier power and impedance compatibility. Electrical and rigging work should be performed by qualified professionals.'}, {title: 'Safe volume and routine maintenance', body: 'Check applicable noise limits, monitor exposure levels, clean vents, inspect mounts, test critical signal paths and schedule periodic recalibration.'}];
+        const DOWNLOADS = [{title: 'Speaker placement checklist', detail: 'Printable planning resource', file: 'placement'}, {title: 'Cabling PDF', detail: 'Printable installation resource', file: 'cabling'}, {title: 'System datasheet request', detail: 'Request model-specific specifications', file: 'datasheets'}, {title: 'Warranty & AMC overview', detail: 'Sample service-policy overview', file: 'warranty'}];
+        const FAQ = [{title: 'Do you provide a free initial site visit?', body: 'This demo advertises a free initial consultation. Confirm travel radius, visit fees and eligibility with the actual company before publishing.'}, {title: 'Can you upgrade an existing sound system?', body: 'Yes. We can audit the installed equipment and propose partial upgrades, improved placement, or complete replacement based on site conditions.'}, {title: 'How long does installation take?', body: 'Schedules depend on venue size, civil works, procurement, mounting requirements and test windows. A project-specific timeline is provided with the quotation.'}, {title: 'Do you provide warranty and AMC?', body: 'Hardware warranty depends on the manufacturer. Preventive maintenance and support contracts can be quoted separately.'}, {title: 'Do you supply Dolby Atmos systems?', body: 'Immersive formats require appropriate approved equipment, licensing and technical compliance. Any Dolby branding, certification or claim must be verified before publishing.'}];
+        const FORMATS = [
+            {id: '2.0', title: 'Stereo 2.0', short: 'Two front channels create left/right stereo imaging.', use: 'Music listening, compact rooms, and basic speech or music systems.', channels: ['L', 'R']},
+            {id: '2.1', title: 'Stereo 2.1', short: 'Two stereo channels plus a subwoofer bass feed (the .1 LFE channel in encoded formats).', use: 'Music, television, and small screening rooms where fuller bass is useful.', channels: ['L', 'R', 'LFE']},
+            {id: '3.1', title: 'Front surround 3.1', short: 'Left, center, and right front channels plus a dedicated LFE channel. The center channel anchors dialogue.', use: 'Dialogue-focused television, presentation rooms, and compact screening rooms.', channels: ['L', 'C', 'R', 'LFE']},
+            {id: '5.1', title: 'Surround 5.1', short: 'Three front channels, two side/rear surround channels, and one LFE channel.', use: 'Home theatres, screening rooms, and smaller surround installations.', channels: ['L', 'C', 'R', 'SL', 'SR', 'LFE']},
+            {id: '7.1', title: 'Surround 7.1', short: 'Five front/side channels, two distinct rear surround channels, and one LFE channel.', use: 'Premium home theatres, screening rooms, and selected cinema installations.', channels: ['L', 'C', 'R', 'SL', 'SR', 'BL', 'BR', 'LFE']},
+            {id: '7.1.4', title: 'Dolby Atmos 7.1.4', short: 'A 7.1 bed layer plus four overhead channels for height effects. Actual cinema layouts vary and require approved design.', use: 'Immersive home theatres and selected, appropriately designed cinema rooms.', channels: ['L', 'C', 'R', 'SL', 'SR', 'BL', 'BR', 'LFE', 'TFL', 'TFR', 'TBL', 'TBR']}
+        ];
+        const CHANNEL_INFO = {L: 'Left front: left-side program and music.', C: 'Center front: dialogue and on-screen focus.', R: 'Right front: right-side program and music.', SL: 'Surround left: side ambience and effects.', SR: 'Surround right: side ambience and effects.', BL: 'Back left: rear surround effects.', BR: 'Back right: rear surround effects.', LFE: 'Subwoofer: deep bass and low-frequency effects.', TFL: 'Top front left: overhead front-left effects.', TFR: 'Top front right: overhead front-right effects.', TBL: 'Top back left: overhead rear-left effects.', TBR: 'Top back right: overhead rear-right effects.'};
+        // =================== APP IMPLEMENTATION ===================
+        const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)], reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+        const whatsapp = (msg = 'Hello, I would like to discuss a professional audio installation.') => 'https://wa.me/' + SITE.phoneDigits + '?text=' + encodeURIComponent(msg);
+        const routeHref = p => '#/' + p;
+        const sectionHead = (label, title, text = '') => `<div class="section-head reveal"><div class="eyebrow">${label}</div><h2>${title}</h2>${text ? `<p>${text}</p>` : ''}</div>`;
+        function art(type = 'Cinema') {const shapes = {Cinema: '<path d="M65 40h370v25H65z" fill="#e50914" opacity=".9"/><path d="M80 120h340M80 170h340M80 220h340" stroke="#596574" stroke-width="10" stroke-linecap="round"/><g fill="#e1e4e8">' + Array.from({length: 7}, (_, i) => `<circle cx="${100 + i * 50}" cy="265" r="12"/>`).join('') + '</g>', Concert: '<path d="M80 90h340v165H80z" fill="#172231" stroke="#e50914" stroke-width="6"/><path d="M135 90l-40 165M365 90l40 165" stroke="#e50914" stroke-width="5"/><path d="M165 155h170" stroke="#e1e4e8" stroke-width="20"/><g fill="#e50914"><circle cx="140" cy="260" r="16"/><circle cx="360" cy="260" r="16"/></g>', Auditorium: '<path d="M75 55h350v65H75z" fill="#e1e4e8"/><g fill="#516071">' + Array.from({length: 6}, (_, i) => Array.from({length: 3}, (_, j) => `<rect x="${100 + i * 52}" y="${145 + j * 48}" width="30" height="25" rx="6"/>`).join('')).join('') + '</g>'}; return `<svg viewBox="0 0 500 320" role="img" aria-label="Stylized ${esc(type)} venue illustration"><defs><radialGradient id="gl"><stop stop-color="#38151a"/><stop offset="1" stop-color="#0f1218"/></radialGradient></defs><rect width="500" height="320" rx="15" fill="url(#gl)"/><path d="M30 290L160 100h180l130 190" stroke="#28313f" stroke-width="3" fill="none"/>${shapes[type] || shapes.Cinema}</svg>`}
+        const cardsServices = (short = false) => SERVICES.slice(0, short ? 3 : 6).map((s, i) => `<article class="card reveal" style="--stagger:${i % 3 * 65}ms"><div class="icon-square" aria-hidden="true">${s.icon}</div><h3>${s.title}</h3><p class="muted">${s.desc}</p>${short ? '<a href="#/services" class="eyebrow">Explore service →</a>' : ''}</article>`).join('');
+        function projectCards(items) {return items.map((p, i) => `<button class="card project-card reveal" style="--stagger:${i % 3 * 70}ms" data-project="${p.id}" aria-label="View project details for ${esc(p.title)}"><div class="media">${art(p.type)}</div><span class="tag">${p.type}</span><h3 style="margin-top:12px">${esc(p.title)}</h3><p class="muted">${esc(p.city)}</p><div class="meta"><span>${esc(p.format)}</span><span>${p.year}</span></div></button>`).join('')}
+        function home() {return `<section class="hero"><div class="container hero-inner"><div><div class="eyebrow">Designed to be heard. Built to last.</div><h1>Sound that <em>moves</em> every audience.</h1><p>Professional sound systems for cinema screens, live stages and auditoriums across Andhra Pradesh. Design, supply, installation and support—from one team.</p><div class="btn-row"><a class="btn" href="#/book">Book a Site Visit →</a><a class="btn secondary" href="#/works">See Our Work</a></div><p style="margin-top:22px;font-size:.78rem">B2B venue solutions • Demo website with sample figures</p></div><div class="hero-art" aria-hidden="true"><div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="speaker"></div><div class="equalizer">${Array.from({length: 19}, () => '<i></i>').join('')}</div></div></div></section><div class="container"><div class="stats">${[[SITE.venues, 'Venues equipped', '+'], [SITE.years, 'Years of experience', '+'], [SITE.screens, 'Cinema screens', '+'], [SITE.rebook, 'Clients who rebook', '%']].map(([v, l, s]) => `<div class="stat"><strong class="counter" data-count="${v}" data-suffix="${s}">0</strong><span>${l} (sample)</span></div>`).join('')}</div></div><section><div class="container">${sectionHead('What we do', 'One partner. Every sound solution.', 'Specialist design, equipment supply, precision installation and support for professional venues.')}<div class="grid">${cardsServices(true)}</div><p style="margin-top:24px"><a class="btn secondary" href="#/services">All Services →</a></p></div></section><section style="background:#10141c"><div class="container">${sectionHead('Recent work', 'Built for rooms that matter.', 'Illustrative projects only — replace with real, approved case studies before launch.')}<div class="grid">${projectCards(PROJECTS.slice(0, 3))}</div><p style="margin-top:24px"><a class="btn secondary" href="#/works">View Previous Works →</a></p></div></section><section><div class="container">${sectionHead('Client voices', 'Trust is earned on site.', 'Sample testimonials — not real customer endorsements.')}<div class="grid">${TESTIMONIALS.map((t, i) => `<article class="card testimonial reveal" style="--stagger:${i * 65}ms"><span style="color:var(--amber);font-size:1.6rem">★★★★★</span><q>${esc(t.quote)}</q><strong>${esc(t.by)}</strong></article>`).join('')}</div></div></section>${cta()}`}
+        function cta() {return `<section><div class="container"><div class="banner reveal"><div><div class="eyebrow">Build your next experience</div><h2 style="margin:9px 0">Let's design the right sound.</h2><p class="muted" style="margin:0">Share your venue details. Our team will discuss the next steps.</p></div><a class="btn" href="#/book">Book a Site Visit →</a></div></div></section>`}
+        const pageHero = (ey, title, desc) => `<section class="page-hero"><div class="container"><div class="eyebrow">${ey}</div><h1 style="font-size:clamp(2.8rem,6vw,4.7rem);max-width:900px">${title}</h1><p>${desc}</p></div></section>`;
+        function servicesPage() {return `${pageHero('Our expertise', 'Sound systems, engineered end to end.', 'Purpose-built acoustic and audio solutions for commercial venues, from first walkthrough to ongoing upkeep.')}<section><div class="container">${sectionHead('Services', 'Choose the right solution')}<div class="grid">${cardsServices()}</div></div></section><section style="background:#11151c"><div class="container">${sectionHead('Workflow', 'A simple, proven process')}<div class="process">${PROCESS.map(([n, t, d]) => `<article class="card reveal"><div class="step-num">${n}</div><h3>${t}</h3><p class="muted">${d}</p></article>`).join('')}</div></div></section><section><div class="container">${sectionHead('Interactive guide', 'Explore sound formats', 'Select a format to see a conceptual top-view speaker layout. Speaker positions are illustrative, not engineering or certification drawings.')}<div class="chip-row" role="group" aria-label="Sound formats">${FORMATS.map(f => `<button class="chip" data-format="${f.id}" aria-pressed="${f.id === '5.1'}">${f.title}</button>`).join('')}</div><div id="format-content" aria-live="polite"></div><p class="notice" style="margin-top:25px">Dolby and Dolby Atmos are trademarks of their respective owners. This is an educational layout illustration, not a representation of licensing, certification, or affiliation.</p></div></section>${cta()}`}
+        // All positions are inside the 600 × 560 SVG viewBox (the original icons were clipped).
+        const POS = {L: [155, 126], C: [300, 126], R: [445, 126], SL: [87, 330], SR: [513, 330], BL: [206, 461], BR: [394, 461], LFE: [78, 192], TFL: [222, 230], TFR: [378, 230], TBL: [222, 399], TBR: [378, 399]};
+        const SPEAKER_COLORS = {main: '#DDE3E9', sub: '#E50914', height: '#65B9FF'};
+        const HEIGHT_CHANNELS = new Set(['TFL', 'TFR', 'TBL', 'TBR']);
+        const FORMAT_ORDER = ['L', 'C', 'R', 'SR', 'BR', 'TFR', 'TBR', 'TBL', 'TFL', 'BL', 'SL', 'LFE'];
+        let previousChannels = new Set(), speakerRun = 0, audioContext = null, demoTimer = null, soundMuted = false;
+        function channelColor(ch) {return ch === 'LFE' ? SPEAKER_COLORS.sub : HEIGHT_CHANNELS.has(ch) ? SPEAKER_COLORS.height : SPEAKER_COLORS.main}
+        function speakerGraphic(ch, i, isNew) {
+            const [x, y] = POS[ch], color = channelColor(ch), height = HEIGHT_CHANNELS.has(ch), sub = ch === 'LFE';
+            const cabinet = sub ? `<rect class="speaker-cabinet" x="-20" y="-19" width="40" height="38" rx="7" fill="#301e28" stroke="${color}" stroke-width="3"/><circle r="13" fill="#0e1520" stroke="${color}" stroke-width="2.5"/><circle r="6" fill="${color}" opacity=".8"/>` : height ? `<circle class="speaker-cabinet" r="19" fill="#142b3c" stroke="${color}" stroke-width="3"/><circle r="12" fill="#0e1622" stroke="${color}" stroke-width="1.7"/><circle r="5.5" fill="${color}"/>` : `<rect class="speaker-cabinet" x="-17" y="-24" width="34" height="48" rx="6" fill="#252129" stroke="${color}" stroke-width="2.6"/><circle cy="-12" r="5" fill="#0e1520" stroke="${color}" stroke-width="1.5"/><circle cy="9" r="10" fill="#0e1520" stroke="${color}" stroke-width="2"/><circle cy="9" r="4" fill="${color}"/>`;
+            return `<g class="speaker-node ${isNew ? 'is-new' : ''}" data-channel="${ch}" style="--delay:${i * 52}ms;--speaker-color:${color};--speaker-glow:${color}77" transform="translate(${x} ${y})"><title>${ch}: ${esc(CHANNEL_INFO[ch])}</title>${height ? `<circle r="29" fill="none" stroke="${color}" stroke-dasharray="3 5" opacity=".7"/>` : ''}${cabinet}<rect x="-24" y="26" width="48" height="20" rx="8" fill="#070c14" stroke="${color}" stroke-width="1"/><text x="0" y="40" text-anchor="middle" font-size="12" font-weight="850" fill="#fff">${ch === 'LFE' ? 'SUB' : ch}</text></g>`;
+        }
+        function diagram(f) {
+            const heights = f.channels.some(ch => HEIGHT_CHANNELS.has(ch));
+            const nodes = f.channels.map((ch, i) => speakerGraphic(ch, i, !previousChannels.has(ch))).join('');
+            return `<svg class="room-svg" viewBox="0 0 600 560" role="img" aria-label="Top view of ${esc(f.title)} showing ${f.channels.length} labeled speaker positions" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="roomGlow" cx="50%" cy="40%" r="70%"><stop stop-color="#202832"/><stop offset="1" stop-color="#0b0d11"/></radialGradient></defs><rect width="600" height="560" rx="19" fill="url(#roomGlow)"/><rect x="35" y="22" width="530" height="510" rx="18" fill="#0b0e12" stroke="#4a505a" stroke-width="3"/><rect x="174" y="37" width="252" height="36" rx="7" fill="#e7e9ec"/><text x="300" y="61" text-anchor="middle" fill="#17191d" font-size="17" font-weight="800">SCREEN / STAGE</text><path d="M175 167 L300 328 L425 167" stroke="#e5091440" fill="#e5091408" stroke-dasharray="7 8"/><path class="sound-arc" d="M124 304 Q300 221 476 304" stroke="#e5091460" stroke-dasharray="6 9" fill="none"/><circle cx="300" cy="330" r="34" fill="#283342" stroke="#90a4b9" stroke-width="2"/><circle cx="300" cy="319" r="12" fill="#d7e3e9"/><path d="M280 346 Q300 322 320 346" fill="#d7e3e9"/><text x="300" y="382" text-anchor="middle" fill="#d6e1ec" font-size="14" font-weight="700">LISTENER</text>${heights ? `<text x="300" y="196" text-anchor="middle" fill="#65B9FF" font-size="12" font-weight="700" letter-spacing="2">CEILING / HEIGHT LAYER</text><path d="M222 230H378M222 399H378M222 230V399M378 230V399" stroke="#65B9FF" opacity=".28" stroke-width="1.8" stroke-dasharray="5 6"/>` : ''}${nodes}</svg>`;
+        }
+        function stopSpeakerDemo() {speakerRun++; if (demoTimer) {clearTimeout(demoTimer); demoTimer = null;} $$('.speaker-node.is-active').forEach(n => n.classList.remove('is-active')); const btn = $('#test-speakers'); if (btn) btn.textContent = '▶ Test Speaker Positions';}
+        function playChannel(ch) {if (soundMuted) return; try {const Ctx = window.AudioContext || window.webkitAudioContext; if (!Ctx) return; if (!audioContext) audioContext = new Ctx(); if (audioContext.state === 'suspended') audioContext.resume().catch(() => { }); const osc = audioContext.createOscillator(), gain = audioContext.createGain(), pan = audioContext.createStereoPanner?.(); const now = audioContext.currentTime; osc.type = 'sine'; osc.frequency.value = ch === 'LFE' ? 90 : ch.startsWith('T') ? 660 : 440; gain.gain.setValueAtTime(0.0001, now); gain.gain.exponentialRampToValueAtTime(.075, now + .025); gain.gain.exponentialRampToValueAtTime(.0001, now + .2); if (pan) {pan.pan.value = ch.endsWith('L') || ch === 'L' || ch === 'SL' || ch === 'BL' ? -.7 : ch.endsWith('R') || ch === 'R' || ch === 'SR' || ch === 'BR' ? .7 : 0; osc.connect(gain).connect(pan).connect(audioContext.destination)} else osc.connect(gain).connect(audioContext.destination); osc.start(now); osc.stop(now + .22)} catch (e) {console.warn('Audio demonstration unavailable', e)} }
+        function testSpeakers() {if (demoTimer) {stopSpeakerDemo(); return;} const id = ++speakerRun; const channels = FORMAT_ORDER.filter(ch => $('.speaker-node[data-channel="' + ch + '"]')); const btn = $('#test-speakers'); if (btn) btn.textContent = '■ Stop Test'; let idx = 0; function next() {if (id !== speakerRun) return; $$('.speaker-node.is-active').forEach(n => n.classList.remove('is-active')); if (idx >= channels.length) {stopSpeakerDemo(); return;} const ch = channels[idx++]; const el = $('.speaker-node[data-channel="' + ch + '"]'); el?.classList.add('is-active'); const status = $('#format-status'); if (status) status.textContent = 'Testing ' + ch + ' — ' + CHANNEL_INFO[ch] + ' (stereo demonstration only)'; playChannel(ch); demoTimer = setTimeout(next, 520)} next()}
+        function showFormat(id) {stopSpeakerDemo(); const f = FORMATS.find(x => x.id === id) || FORMATS.find(x => x.id === '5.1'); $$('[data-format]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.format === f.id))); const channels = f.channels, mains = channels.filter(ch => ch !== 'LFE' && !HEIGHT_CHANNELS.has(ch)).length, overhead = channels.filter(ch => HEIGHT_CHANNELS.has(ch)).length, sub = channels.includes('LFE') ? 1 : 0; const target = $('#format-content'); target.innerHTML = `<div class="format-layout"><div class="diagram-wrap">${diagram(f)}<div class="legend"><span><i class="dot" style="background:${SPEAKER_COLORS.main}"></i>Main / surround</span><span><i class="dot" style="background:${SPEAKER_COLORS.sub}"></i>Subwoofer</span><span><i class="dot" style="background:${SPEAKER_COLORS.height}"></i>Ceiling / overhead</span></div><div class="format-demo-tools"><button type="button" class="btn small" id="test-speakers">▶ Test Speaker Positions</button><button type="button" class="btn secondary small" id="mute-speakers" aria-pressed="${soundMuted}">${soundMuted ? '🔇 Sound muted' : '🔊 Sound on'}</button></div><p class="format-status" id="format-status" role="status">Illustrative positions • Audio test plays through your device's stereo output.</p></div><div class="card format-summary"><div class="eyebrow">Speaker configuration</div><h3>${esc(f.title)}</h3><p class="muted">${esc(f.short)}</p><div class="format-counts"><div class="format-count"><strong>${mains}</strong><span>Main / surround channels</span></div><div class="format-count"><strong>${sub}</strong><span>LFE channel</span></div><div class="format-count"><strong>${overhead}</strong><span>Overhead channels</span></div><div class="format-count"><strong>${channels.length}</strong><span>Illustrated positions</span></div></div><p><strong>Best for:</strong> ${esc(f.use)}</p><ul class="channel-list">${channels.map(ch => `<li><b>${ch === 'LFE' ? 'SUB / LFE' : ch}</b> — ${esc(CHANNEL_INFO[ch])}</li>`).join('')}</ul><p class="format-note">Conceptual single-listener layout, not a construction plan. Commercial cinema installations can use several physical speakers for a single surround channel. The .1 denotes a low-frequency effects channel, not necessarily the number of subwoofer cabinets.</p></div></div>`; previousChannels = new Set(channels); $('#test-speakers').addEventListener('click', testSpeakers); $('#mute-speakers').addEventListener('click', e => {soundMuted = !soundMuted; e.currentTarget.setAttribute('aria-pressed', String(soundMuted)); e.currentTarget.textContent = soundMuted ? '🔇 Sound muted' : '🔊 Sound on'});}
+        function worksPage() {return `${pageHero('Portfolio', 'Previous works. Powerful moments.', 'Explore sample cinema, concert and auditorium setups. All project names and specifications below are demonstrative placeholders.')}<section><div class="container"><p class="notice">Sample projects only. Replace these case studies with client-approved facts, photographs and references.</p><div class="chip-row" role="group" aria-label="Filter projects">${['All', 'Cinema', 'Concert', 'Auditorium'].map((f, i) => `<button class="chip" data-project-filter="${f}" aria-pressed="${i === 0}">${f}</button>`).join('')}</div><div id="projects-grid" class="grid">${projectCards(PROJECTS)}</div></div></section>${cta()}`}
+        function partnersPage() {return `${pageHero('Collaborate with us', 'Better sound. Stronger partnerships.', 'We work with technology providers, dealers and certified installation professionals across the region.')}<section><div class="container">${sectionHead('Our network', 'Partner ecosystem', 'The tiles below are placeholder names, not real endorsements or business relationships.')}<div class="chip-row" role="group" aria-label="Filter partners">${['All', 'Technology', 'Dealers', 'Installers'].map((t, i) => `<button class="chip" data-partner-filter="${t}" aria-pressed="${i === 0}">${t}</button>`).join('')}</div><div id="partner-grid" class="grid">${partnerTiles(PARTNERS)}</div><p class="notice" style="margin-top:20px">Real brand logos, including Dolby and DTS, require appropriate permission and must not imply endorsement or certification without authorization.</p></div></section><section style="background:#10151c"><div class="container"><div class="grid two"><div>${sectionHead('Become a partner', 'Grow together.', 'Tell us about your business. This demonstration validates your input locally; it does not send or store data.')}<div class="grid two">${[['↗', 'Commercial margins'], ['◈', 'Product training'], ['◎', 'Lead sharing'], ['⚙', 'Technical support']].map(([i, t]) => `<div class="card"><div class="icon-square">${i}</div><b>${t}</b></div>`).join('')}</div></div><div class="card"><h3>Partner enquiry</h3><form id="partner-form" novalidate><div class="form-grid"><div class="field full"><label for="company">Company name *</label><input id="company" name="company" required maxlength="100"><small class="error" data-error="company"></small></div><div class="field"><label for="partner-city">City *</label><input id="partner-city" name="city" required maxlength="70"><small class="error" data-error="city"></small></div><div class="field"><label for="partner-phone">Phone *</label><input id="partner-phone" name="phone" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile" maxlength="10" required><small class="error" data-error="phone"></small></div><div class="field full"><label for="partner-type">Partner type *</label><select id="partner-type" name="type" required><option value="">Select type</option><option>Technology</option><option>Dealer</option><option>Installer</option></select><small class="error" data-error="type"></small></div></div><div class="form-actions"><button class="btn" type="submit">Submit Enquiry →</button></div><div id="partner-result" role="status" aria-live="polite"></div></form></div></div></div></section>`}
+        function partnerTiles(items) {return items.map(p => `<article class="card partner-logo" aria-label="${esc(p.name)}, placeholder ${p.type} partner"><div>◉ ${esc(p.name)}<small>${p.type.toUpperCase()} • PLACEHOLDER</small></div></article>`).join('')}
+        function accordionList(items, prefix) {return items.map((item, i) => `<div class="accordion"><h3 style="margin:0"><button type="button" aria-expanded="false" aria-controls="${prefix}-${i}" id="${prefix}-head-${i}"><span>${esc(item.title)}</span><span aria-hidden="true">+</span></button></h3><div id="${prefix}-${i}" class="accordion-body" role="region" aria-labelledby="${prefix}-head-${i}"><div><p>${esc(item.body)}</p></div></div></div>`).join('')}
+        function supportPage() {return `${pageHero('After-sales care', 'Support at every step.', 'Get help planning, operating and caring for your venue sound system.')}<section><div class="container"><div class="grid">${[['☎', 'Call our team', SITE.phone, 'tel:' + SITE.phone.replace(/\s/g, '')], ['✆', 'WhatsApp support', 'Send us a message', whatsapp('Hello, I need support for a sound system.')], ['◎', 'Schedule an on-site visit', 'Arrange a venue inspection', '#/book']].map(([icon, title, sub, href]) => `<article class="card"><div class="icon-square">${icon}</div><h3>${title}</h3><p class="muted">${sub}</p><a class="btn secondary small" href="${href}" ${href.startsWith('https') ? 'target="_blank" rel="noopener noreferrer"' : ''}>Get Support →</a></article>`).join('')}</div></div></section><section style="background:#10151c"><div class="container"><div class="grid two"><div>${sectionHead('Resources', 'Setup & guidelines', 'Good planning and regular checks improve reliability.')}<div>${accordionList(GUIDES, 'guide')}</div></div><div>${sectionHead('Downloads', 'Useful resources', 'Sample downloadable PDF checklists are generated locally, not manufacturer datasheets.')}<div class="card">${DOWNLOADS.map(d => `<div class="download" style="padding:12px 0;border-bottom:1px solid var(--line)"><div><b>${d.title}</b><div class="muted" style="font-size:.82rem">${d.detail}</div></div><button class="btn secondary small" data-download="${d.file}">Get ↧</button></div>`).join('')}</div></div></div></div></section><section><div class="container" style="max-width:850px">${sectionHead('Questions', 'Frequently asked questions')}<div>${accordionList(FAQ, 'faq')}</div></div></section>${cta()}`}
+        function bookingPage() {const minDate = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10); return `${pageHero('Plan a site visit', 'Tell us about your venue.', 'Submit your details to request an initial consultation. This demo does not transmit bookings to a company.')}<section><div class="container booking-layout"><div class="card" id="booking-card"><h2 style="font-size:1.8rem">Request an appointment</h2><p class="muted">Fields marked * are required.</p><form id="booking-form" novalidate><div class="form-grid"><div class="field"><label for="book-name">Full name *</label><input id="book-name" name="name" autocomplete="name" required maxlength="80"><small class="error" data-error="name"></small></div><div class="field"><label for="book-phone">Indian mobile number *</label><input id="book-phone" name="phone" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile" maxlength="10" required><small class="error" data-error="phone"></small></div><div class="field"><label for="book-email">Email *</label><input id="book-email" type="email" name="email" autocomplete="email" required maxlength="120"><small class="error" data-error="email"></small></div><div class="field"><label for="book-venue">Venue type *</label><select id="book-venue" name="venue" required><option value="">Select venue</option><option>Cinema / Multiplex</option><option>Concert / Outdoor Event</option><option>Auditorium</option><option>Other Commercial Venue</option></select><small class="error" data-error="venue"></small></div><div class="field"><label for="book-capacity">Seating / audience capacity *</label><input id="book-capacity" name="capacity" type="number" min="1" max="1000000" step="1" placeholder="e.g. 300" required><small class="error" data-error="capacity"></small></div><div class="field"><label for="book-city">City *</label><input id="book-city" name="city" required maxlength="70" placeholder="e.g. Visakhapatnam"><small class="error" data-error="city"></small></div><div class="field"><label for="book-date">Preferred date *</label><input id="book-date" name="date" type="date" min="${minDate}" required><small class="error" data-error="date"></small></div><div class="field"><label for="book-service">Service needed *</label><select id="book-service" name="service" required><option value="">Choose service</option>${SERVICES.map(s => `<option>${s.title}</option>`).join('')}</select><small class="error" data-error="service"></small></div><div class="field full"><label>Preferred time slot *</label><div class="slot-group" role="group" aria-label="Preferred appointment time">${['10 AM', '12 PM', '3 PM', '5 PM'].map(t => `<button type="button" class="slot" aria-pressed="false" data-time="${t}">${t}</button>`).join('')}</div><input type="hidden" name="time" id="selected-time"><small class="error" data-error="time"></small></div><div class="field full"><label for="book-notes">Additional notes</label><textarea id="book-notes" name="notes" maxlength="1000" placeholder="Venue size, existing setup, challenges or preferred equipment"></textarea><small class="error" data-error="notes"></small></div></div><div class="form-actions"><button type="submit" class="btn">Request Site Visit →</button></div><p class="muted" style="font-size:.77rem;margin-top:13px">Demo only: submitting generates a reference on this device; no email or server request is made.</p></form></div><aside class="sidebar-stack"><div class="card"><div class="icon-square">➜</div><h3>What happens next?</h3><p class="muted">1. We review your venue details.</p><p class="muted">2. We confirm timing and technical requirements.</p><p class="muted">3. We survey the space and prepare a proposal.</p></div><div class="card"><div class="icon-square">✓</div><h3>Initial consultation: free*</h3><p class="muted">Discuss your project scope without obligation. *Demo offer: confirm visit fee, area coverage and terms with the actual company.</p><a href="${whatsapp('Hello, I want to enquire about a site visit.')}" target="_blank" rel="noopener noreferrer" class="btn secondary small">Ask on WhatsApp</a></div></aside></div></section>`}
+        const ROUTES = {'/': home, '/services': servicesPage, '/works': worksPage, '/partners': partnersPage, '/support': supportPage, '/book': bookingPage};
+        const PATH_TITLES = {'/': 'Home', '/services': 'Services', '/works': 'Previous Works', '/partners': 'Partners', '/support': 'Support', '/book': 'Book Appointment'};
+        let currentPath = '', navigationTimer = null, observer = null, lastScroll = 0, activeModal = null;
+        function render() {if (currentPath === '/services') stopSpeakerDemo(); const raw = location.hash.replace(/^#/, '') || '/', path = ROUTES[raw] ? raw : '/'; if (path === currentPath) return; const app = $('#app'); if (observer) observer.disconnect(); if (activeModal) closeModal(); const commit = () => {currentPath = path; app.className = 'page'; app.innerHTML = ROUTES[path](); document.title = PATH_TITLES[path] + ' | ' + SITE.brand; $$('#nav a').forEach(a => {const active = a.getAttribute('href') === '#' + path; if (active) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current')}); $('#nav').classList.remove('open'); $('#menu-toggle').setAttribute('aria-expanded', 'false'); $('#menu-toggle').textContent = '☰'; $('#site-header').classList.remove('hidden'); window.scrollTo({top: 0, behavior: 'instant'}); attachPageListeners(); revealSetup(); app.focus({preventScroll: true})}; clearTimeout(navigationTimer); if (currentPath && !reduced) {app.classList.add('exiting'); navigationTimer = setTimeout(commit, 160)} else commit()}
+        function revealSetup() {if (reduced || !('IntersectionObserver' in window)) {$$('.reveal').forEach(x => x.classList.add('visible')); $$('.counter').forEach(el => el.textContent = el.dataset.count + el.dataset.suffix); return } observer = new IntersectionObserver(entries => entries.forEach(e => {if (!e.isIntersecting) return; e.target.classList.add('visible'); if (e.target.classList.contains('counter')) countUp(e.target); observer.unobserve(e.target)}), {threshold: .13}); $$('.reveal,.counter').forEach(el => observer.observe(el))}
+        function countUp(el) {const goal = +el.dataset.count, start = performance.now(), duration = 1150; const tick = t => {if (!el.isConnected) return; const p = Math.min((t - start) / duration, 1); el.textContent = Math.round(goal * (1 - (1 - p) ** 3)) + el.dataset.suffix; if (p < 1) requestAnimationFrame(tick)}; requestAnimationFrame(tick)}
+        function attachPageListeners() {if (currentPath === '/services') {showFormat('5.1'); $$('[data-format]').forEach(b => b.addEventListener('click', () => showFormat(b.dataset.format)))} if (currentPath === '/works') $$('[data-project-filter]').forEach(b => b.addEventListener('click', () => {$$('[data-project-filter]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); $('#projects-grid').innerHTML = projectCards(PROJECTS.filter(p => b.dataset.projectFilter === 'All' || p.type === b.dataset.projectFilter)); revealSetup()})); if (currentPath === '/partners') {$$('[data-partner-filter]').forEach(b => b.addEventListener('click', () => {$$('[data-partner-filter]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); $('#partner-grid').innerHTML = partnerTiles(PARTNERS.filter(p => b.dataset.partnerFilter === 'All' || p.type === b.dataset.partnerFilter))})); bindPartner()} if (currentPath === '/support') {bindAccordions(); $$('[data-download]').forEach(b => b.addEventListener('click', () => downloadGuide(b.dataset.download)))} if (currentPath === '/book') bindBooking()}
+        function openProject(id) {const p = PROJECTS.find(p => p.id === id); if (!p) return; const root = $('#modal-root'); root.innerHTML = `<div class="modal-backdrop" id="modal-backdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-head"><div><span class="tag">${p.type} • Sample project</span><h2 id="modal-title" style="font-size:2rem;margin-top:12px">${esc(p.title)}</h2></div><button class="close" id="modal-close" aria-label="Close project details">×</button></div><div class="media">${art(p.type)}</div><p class="muted">Illustrative project data, not a verified client installation.</p><div class="grid two" style="gap:9px"><p><b>Sound format</b><br>${esc(p.format)}</p><p><b>Seats / capacity</b><br>${esc(p.capacity)}</p><p><b>Year</b><br>${p.year}</p><p><b>Location</b><br>${esc(p.city)}</p></div><p><b>Scope</b><br>${esc(p.scope)}</p><a href="#/book" class="btn" id="similar-booking">Book similar setup →</a></div></div>`; activeModal = document.activeElement; document.body.classList.add('modal-open'); $('#modal-close').focus(); $('#modal-close').onclick = closeModal; $('#modal-backdrop').onclick = e => {if (e.target.id === 'modal-backdrop') closeModal()}; $('#similar-booking').onclick = closeModal; $('#modal-backdrop').onkeydown = e => {if (e.key === 'Tab') {const focusables = $$('a,button', '#modal-backdrop' in window ? document : root).filter(x => root.contains(x)); const first = focusables[0], last = focusables.at(-1); if (e.shiftKey && document.activeElement === first) {e.preventDefault(); last.focus()} else if (!e.shiftKey && document.activeElement === last) {e.preventDefault(); first.focus()} } }}
+        function closeModal() {$('#modal-root').innerHTML = ''; document.body.classList.remove('modal-open'); if (activeModal?.isConnected) activeModal.focus(); activeModal = null}
+        document.addEventListener('click', e => {const card = e.target.closest('[data-project]'); if (card) openProject(+card.dataset.project)}); document.addEventListener('keydown', e => {if (e.key === 'Escape' && $('#modal-backdrop')) closeModal()});
+        function bindAccordions() {$$('.accordion button').forEach(btn => btn.onclick = () => {let open = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', String(!open)); $('#' + btn.getAttribute('aria-controls')).classList.toggle('open', !open)})}
+        function downloadGuide(key) {
+            const d = DOWNLOADS.find(d => d.file === key); if (!d) return;
+            if (key === 'datasheets') {location.hash = '#/book'; return }
+            // Tiny dependency-free PDF writer for a one-page sample checklist.
+            const lines = [d.title.toUpperCase(), 'VEYRA AUDIO - SAMPLE RESOURCE', 'Illustrative guidance only; not an engineered specification.', '', ...GUIDES.flatMap((g, i) => [`${i + 1}. ${g.title}`, ...wrapPdf(g.body, 86), ''])];
+            const content = ['BT', '/F1 11 Tf']; let y = 760;
+            for (const line of lines.slice(0, 54)) {content.push(`1 0 0 1 45 ${y} Tm (${pdfEscape(line)}) Tj`); y -= 13}
+            content.push('ET'); const stream = content.join('\n');
+            const objects = ['<< /Type /Catalog /Pages 2 0 R >>', '<< /Type /Pages /Kids [3 0 R] /Count 1 >>', '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>', '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>', `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`];
+            let pdf = '%PDF-1.4\n', offsets = [0]; objects.forEach((obj, i) => {offsets.push(pdf.length); pdf += `${i + 1} 0 obj\n${obj}\nendobj\n`});
+            const xref = pdf.length; pdf += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`; offsets.slice(1).forEach(o => pdf += String(o).padStart(10, '0') + ' 00000 n \n'); pdf += `trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`;
+            const blob = new Blob([pdf], {type: 'application/pdf'}), url = URL.createObjectURL(blob), link = document.createElement('a'); link.href = url; link.download = `veyra-${key}-sample.pdf`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000)
+        }
+        function pdfEscape(s) {return String(s).replace(/[^\x20-\x7E]/g, '-').replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)')}
+        function wrapPdf(text, n) {const lines = []; let line = ''; for (const word of text.split(/\s+/)) {if ((line + ' ' + word).trim().length > n) {lines.push(line); line = word} else line = (line + ' ' + word).trim()} if (line) lines.push(line); return lines}
+        function valuesOf(form) {return Object.fromEntries(new FormData(form).entries())}
+        function validate(form, fields) {const data = valuesOf(form), errors = {}; const requiredMessage = 'This field is required.'; fields.forEach(k => {const v = (data[k] || '').trim(); if (!v) {errors[k] = requiredMessage; return } if (k === 'phone' && !/^[6-9]\d{9}$/.test(v)) errors[k] = 'Enter a valid 10-digit Indian mobile number.'; if (k === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) errors[k] = 'Enter a valid email address.'; if (k === 'capacity' && (!/^\d+$/.test(v) || +v < 1 || +v > 1000000)) errors[k] = 'Enter a valid capacity between 1 and 1,000,000.'; if (k === 'date') {const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10); if (v < today || !/^\d{4}-\d{2}-\d{2}$/.test(v)) errors[k] = 'Choose today or a future date.'} }); fields.forEach(k => {const err = form.querySelector(`[data-error="${k}"]`), field = form.elements[k]; if (err) err.textContent = errors[k] || ''; if (field && field.type !== 'hidden') field.setAttribute('aria-invalid', String(!!errors[k]))}); return {data, errors}}
+        function bindPartner() {const f = $('#partner-form'); f?.addEventListener('submit', e => {e.preventDefault(); const {data, errors} = validate(f, ['company', 'city', 'phone', 'type']); if (Object.keys(errors).length) {f.querySelector('[aria-invalid="true"]')?.focus(); return } const ref = reference('PAR'); $('#partner-result').innerHTML = `<p class="notice" style="margin-top:18px" role="status">Enquiry validated. Demo reference: <b>${ref}</b>. No details were sent. Connect a backend to receive enquiries.</p>`; f.reset();/* TODO: POST validated partner data to your backend, handle errors and consent securely. */})}
+        function reference(prefix) {const arr = new Uint32Array(1); if (window.crypto?.getRandomValues) crypto.getRandomValues(arr); else arr[0] = Math.floor(Math.random() * 1000000000); return prefix + '-' + new Date().toISOString().slice(0, 10).replaceAll('-', '') + '-' + String(arr[0] % 1000000).padStart(6, '0')}
+        function bindBooking() {const f = $('#booking-form'); $$('[data-time]').forEach(b => b.onclick = () => {$$('[data-time]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); $('#selected-time').value = b.dataset.time; $('[data-error="time"]').textContent = ''}); f.addEventListener('submit', e => {e.preventDefault(); const {data, errors} = validate(f, ['name', 'phone', 'email', 'venue', 'capacity', 'city', 'date', 'service', 'time']); if (Object.keys(errors).length) {const key = Object.keys(errors)[0]; (f.elements[key]?.type === 'hidden' ? f.querySelector('[data-time]') : f.elements[key])?.focus(); return } const ref = reference('VIS');/* TODO: Send validated `data` to your secure backend/API. Use server-side validation, rate limiting, spam protection, an idempotency key, database persistence and an actual confirmation response before calling the appointment booked. */$('#booking-card').innerHTML = `<div class="success" role="status"><div class="check" aria-hidden="true">✓</div><h2>Request prepared!</h2><p>Your details passed local validation. This is a <b>demo success screen</b>; no appointment was sent or confirmed.</p><p class="eyebrow">Demo reference ID</p><h3 style="font-size:1.7rem;word-break:break-word">${ref}</h3><p class="muted">Preferred visit: ${esc(data.date)} at ${esc(data.time)} • ${esc(data.city)}</p><div class="btn-row" style="justify-content:center"><a class="btn" target="_blank" rel="noopener noreferrer" href="${whatsapp('Hello, I would like to request a site visit. Demo reference ' + ref + '. Venue: ' + data.venue + ', city: ' + data.city + ', date: ' + data.date + ' ' + data.time + '.')}">Send request on WhatsApp →</a><a class="btn secondary" href="#/support">Explore Support</a></div></div>`; $('#booking-card').scrollIntoView({block: 'start', behavior: reduced ? 'instant' : 'smooth'})})}
+        function renderFooter() {$('#footer').innerHTML = `<div class="container"><div class="footer-grid"><div><div class="brand" style="margin-bottom:15px">◉ <span>VEYRA<span> AUDIO</span></span></div><p class="muted" style="max-width:350px">Professional audio systems for cinema, live events and auditoriums. Designed for your space.</p><span class="tag">Andhra Pradesh • India</span></div><div><h3>Explore</h3><div class="footer-links">${Object.entries(PATH_TITLES).map(([p, n]) => `<a href="#${p}">${n}</a>`).join('')}</div></div><div><h3>Contact</h3><div class="footer-links"><a href="tel:${SITE.phone.replace(/\s/g, '')}">${SITE.phone}</a><a href="mailto:${SITE.email}">${SITE.email}</a><span>${SITE.address}</span><a href="${whatsapp()}" target="_blank" rel="noopener noreferrer">WhatsApp us →</a></div></div></div><div class="bottom">© <span id="copyright-year">${new Date().getFullYear()}</span> ${SITE.brand}. Demo website — sample statistics, works, testimonials and partners are placeholders.</div></div>`; $('#whatsapp').href = whatsapp()}
+        $('#menu-toggle').onclick = () => {const open = $('#nav').classList.toggle('open'); $('#menu-toggle').setAttribute('aria-expanded', String(open)); $('#menu-toggle').textContent = open ? '×' : '☰'};
+        let scrollScheduled = false; window.addEventListener('scroll', () => {if (scrollScheduled) return; scrollScheduled = true; requestAnimationFrame(() => {const y = scrollY; if (y > 160 && y > lastScroll + 7 && !$('#nav').classList.contains('open') && !$('#modal-backdrop')) $('#site-header').classList.add('hidden'); else if (y < lastScroll - 7 || y < 70) $('#site-header').classList.remove('hidden'); lastScroll = y; scrollScheduled = false})}, {passive: true});
+        window.addEventListener('hashchange', render); renderFooter(); render();
+    </script>
+</body>
+
+</html>
